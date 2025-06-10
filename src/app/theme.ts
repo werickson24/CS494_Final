@@ -12,7 +12,7 @@ const theme = createTheme({
       main: '#580ee3',
     },
     secondary: {
-      main: '#1a00c2',
+      main: '#624aff',
     },
   },
   // stop mui from making every button YELL AT YOU 

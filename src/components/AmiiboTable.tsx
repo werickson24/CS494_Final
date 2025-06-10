@@ -44,7 +44,7 @@ export default function AmiiboTable({ amiibo, sortOptions, onSortChange }: Amiib
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>Image</TableCell>
+            <TableCell></TableCell>
             <TableCell>
               <TableSortLabel
                 active={sortOptions.field === 'name'}
@@ -101,7 +101,7 @@ export default function AmiiboTable({ amiibo, sortOptions, onSortChange }: Amiib
             return (
               <TableRow key={uniqueKey}>
                 <TableCell>
-                  <Avatar src={item.image} alt={item.name} sx={{ width: 56, height: 56}} />
+                  <Avatar src={item.image} alt={item.name} sx={{ width: 56, height: 56}} variant="rounded" slotProps={{img: { sx: {objectFit: 'contain'}}}}/>
                 </TableCell>
                 <TableCell>{item.name}</TableCell>
                 <TableCell>{item.character}</TableCell>
@@ -113,7 +113,7 @@ export default function AmiiboTable({ amiibo, sortOptions, onSortChange }: Amiib
                 <TableCell>
                   <Button
                     variant={isInCollection(uniqueId) ? "contained" : "outlined"}
-                    color={isInCollection(uniqueId) ? "secondary" : "primary"}
+                    color={isInCollection(uniqueId) ? "primary" : "secondary"}
                     startIcon={isInCollection(uniqueId) ? <Remove /> : <Add />}
                     onClick={() => 
                       isInCollection(uniqueId) 
