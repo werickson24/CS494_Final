@@ -111,7 +111,7 @@ export default function CollectionPage() {
                   height="200"
                   image={amiibo.image}
                   alt={amiibo.name}
-                  sx={{ objectFit: 'contain' }}
+                  sx={{ objectFit: 'contain', mt: 5}}
                 />
                 <CardContent>
                   <Typography variant="h6" component="h2" gutterBottom>

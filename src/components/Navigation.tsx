@@ -13,7 +13,7 @@ export default function Navigation() {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Amiibo Explorer
+          Amiibo API Explorer
         </Typography>
         <Button color="inherit" component={Link} href="/" startIcon={<Home />}>
           Browse

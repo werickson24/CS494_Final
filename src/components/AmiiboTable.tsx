@@ -101,7 +101,7 @@ export default function AmiiboTable({ amiibo, sortOptions, onSortChange }: Amiib
             return (
               <TableRow key={uniqueKey}>
                 <TableCell>
-                  <Avatar src={item.image} alt={item.name} sx={{ width: 56, height: 56 }} />
+                  <Avatar src={item.image} alt={item.name} sx={{ width: 56, height: 56}} />
                 </TableCell>
                 <TableCell>{item.name}</TableCell>
                 <TableCell>{item.character}</TableCell>
