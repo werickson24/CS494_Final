@@ -1,4 +1,3 @@
-// Collection page
 'use client';
 
 import React, { useState, useMemo } from 'react';
@@ -27,6 +26,7 @@ export default function CollectionPage() {
 
   const getUniqueId = (amiibo: Amiibo) => `${amiibo.head}-${amiibo.tail}`;
 
+  //useMemo great for handling all the data from the api
   const sortedCollection = useMemo(() => {
     return [...collection].sort((a, b) => {
       let aValue: string | null;

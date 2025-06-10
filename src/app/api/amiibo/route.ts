@@ -1,4 +1,3 @@
-// Next.js API route for server-side data fetching
 import { NextResponse } from 'next/server';
 import { fetchAllAmiibo, fetchAmiiboByType, fetchAmiiboByGameSeries } from '@/lib/amiiboApi';
 

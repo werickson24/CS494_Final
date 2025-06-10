@@ -1,4 +1,3 @@
-// Controlled form component for filtering
 'use client';
 
 import React from 'react';

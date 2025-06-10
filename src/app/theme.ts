@@ -1,4 +1,3 @@
-// MUI theme configuration
 'use client';
 
 import { createTheme } from '@mui/material/styles';

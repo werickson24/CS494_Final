@@ -1,4 +1,3 @@
-// Main table component with sorting functionality
 'use client';
 
 import React from 'react';
@@ -36,7 +35,6 @@ export default function AmiiboTable({ amiibo, sortOptions, onSortChange }: Amiib
     return release.na || release.eu || release.jp || release.au || 'Unknown';
   };
 
-  // Create a unique key for each amiibo
   const getUniqueKey = (item: Amiibo, index: number) => {
     return `${item.head}-${item.tail}-${index}`;
   };
@@ -98,7 +96,7 @@ export default function AmiiboTable({ amiibo, sortOptions, onSortChange }: Amiib
         <TableBody>
           {amiibo.map((item, index) => {
             const uniqueKey = getUniqueKey(item, index);
-            const uniqueId = `${item.head}-${item.tail}`; // Use for collection operations
+            const uniqueId = `${item.head}-${item.tail}`;
             
             return (
               <TableRow key={uniqueKey}>

@@ -1,4 +1,3 @@
-// API utility functions
 import { AmiiboResponse, Amiibo } from '@/types/amiibo';
 
 const BASE_URL = 'https://www.amiiboapi.com/api/amiibo';

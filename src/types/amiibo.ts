@@ -1,4 +1,3 @@
-// Custom types for Amiibo data
 export interface Amiibo {
   amiiboSeries: string;
   character: string;

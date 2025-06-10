@@ -1,4 +1,3 @@
-// Main browse page
 'use client';
 
 import React, { useState, useEffect, useMemo } from 'react';
@@ -22,7 +21,6 @@ export default function HomePage() {
     direction: 'asc'
   });
 
-  // Fetch data from API route
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -43,7 +41,7 @@ export default function HomePage() {
     fetchData();
   }, []);
 
-  // Get unique values for filter options
+  //useMemo is great for processing the huge data from the api
   const filterOptions = useMemo(() => {
     const types = [...new Set(amiibo.map(item => item.type))].sort();
     const gameSeries = [...new Set(amiibo.map(item => item.gameSeries))].sort();
@@ -52,7 +50,6 @@ export default function HomePage() {
     return { types, gameSeries, characters };
   }, [amiibo]);
 
-  // Filter and sort amiibo
   const filteredAndSortedAmiibo = useMemo(() => {
     const filtered = amiibo.filter(item => {
       return (
@@ -63,7 +60,6 @@ export default function HomePage() {
       );
     });
 
-    // Sort the filtered results
     return filtered.toSorted((a, b) => {
       let aValue: string | null;
       let bValue: string | null;
@@ -76,7 +72,6 @@ export default function HomePage() {
         bValue = b[sortOptions.field] as string;
       }
 
-      // Handle null values
       if (aValue === null && bValue === null) return 0;
       if (aValue === null) return 1;
       if (bValue === null) return -1;

@@ -1,4 +1,3 @@
-// Root layout with providers
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
@@ -8,7 +7,7 @@ import theme from './theme';
 
 export const metadata: Metadata = {
   title: 'Amiibo Explorer',
-  description: 'Browse and collect your favorite Amiibo figures',
+  description: 'Browse and collect your favorite Amiibo figures, Oregon State University, William Erickson',
 };
 
 export default function RootLayout({

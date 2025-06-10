@@ -1,4 +1,3 @@
-// Context provider for managing local collection
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
@@ -21,7 +20,6 @@ interface CollectionProviderProps {
 export function CollectionProvider({ children }: CollectionProviderProps) {
   const [collection, setCollection] = useState<Amiibo[]>([]);
 
-  // Load collection from localStorage on mount
   useEffect(() => {
     const savedCollection = localStorage.getItem('amiiboCollection');
     if (savedCollection) {
@@ -34,7 +32,6 @@ export function CollectionProvider({ children }: CollectionProviderProps) {
     }
   }, []);
 
-  // Save collection to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem('amiiboCollection', JSON.stringify(collection));
   }, [collection]);
